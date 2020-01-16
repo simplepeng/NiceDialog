@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btn_niceDialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NiceDialog"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_bottomDialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BottomDialog"
+        app:layout_constraintStart_toEndOf="@id/btn_niceDialog"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_editDialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="EditDialog"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_niceDialog" />
+
+    <Button
+        android:id="@+id/btn_bottomEditDialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BottomEditDialog"
+        app:layout_constraintStart_toEndOf="@id/btn_editDialog"
+        app:layout_constraintTop_toBottomOf="@+id/btn_niceDialog" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
