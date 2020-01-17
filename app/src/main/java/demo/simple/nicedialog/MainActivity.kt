@@ -2,12 +2,14 @@ package demo.simple.nicedialog
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Window
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        requestWindowFeature(Window.FEATURE_NO_TITLE)
         setContentView(R.layout.activity_main)
 
         btn_niceDialog.setOnClickListener {
@@ -28,6 +30,10 @@ class MainActivity : AppCompatActivity() {
 
         btn_bottomEditDialog.setOnClickListener {
             EditBottomDialogImpl(this).show()
+        }
+
+        btn_fullDialog.setOnClickListener {
+            FullDialogImpl(this).show()
         }
     }
 

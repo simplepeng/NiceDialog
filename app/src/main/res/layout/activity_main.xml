@@ -38,4 +38,11 @@
         app:layout_constraintStart_toEndOf="@id/btn_editDialog"
         app:layout_constraintTop_toBottomOf="@+id/btn_niceDialog" />
 
+    <Button
+        android:id="@+id/btn_fullDialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="FullDialog"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_bottomEditDialog" />
 </androidx.constraintlayout.widget.ConstraintLayout>
