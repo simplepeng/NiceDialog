@@ -14,4 +14,7 @@ class EditBottomDialogImpl(context: Context) : NiceBottomDialog(context) {
     override fun onCreateAfter(savedInstanceState: Bundle?) {
     }
 
+    override fun autoShowSoftInput(): Boolean {
+        return true
+    }
 }

@@ -3,6 +3,8 @@ package me.simple.nicedialog
 import android.content.Context
 import android.graphics.Color
 import android.os.Build
+import android.os.Bundle
+import android.view.ViewGroup
 import android.view.WindowManager
 
 abstract class NiceFullScreenDialog(context: Context) : NiceDialog(context) {
@@ -16,7 +18,7 @@ abstract class NiceFullScreenDialog(context: Context) : NiceDialog(context) {
     }
 
     override fun show() {
-//        hideBar()
+        hideBar()
         super.show()
     }
 
