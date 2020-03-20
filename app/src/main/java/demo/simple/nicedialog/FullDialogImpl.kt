@@ -13,4 +13,7 @@ class FullDialogImpl(context: Context) : NiceFullScreenDialog(context) {
     override fun onCreateAfter(savedInstanceState: Bundle?) {
     }
 
+    override fun isHideBar(): Boolean {
+        return true
+    }
 }
