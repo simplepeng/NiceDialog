@@ -16,12 +16,14 @@ abstract class NiceFullScreenDialog(context: Context) : NiceDialog(context) {
     }
 
     override fun show() {
-        hideBar()
+//        hideBar()
         super.show()
     }
 
+    protected open fun isHideBar(): Boolean = true
+
     private fun hideBar() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP && isHideBar()) {
             window?.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
             window?.statusBarColor = Color.TRANSPARENT
         }
