@@ -2,7 +2,10 @@ package demo.simple.nicedialog
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.view.Window
+import demo.simple.nicedialog.dialog_fragment_impl.NiceDialogFragmentImpl
+import demo.simple.nicedialog.dialog_impl.*
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -39,5 +42,10 @@ class MainActivity : AppCompatActivity() {
 
     private fun showNiceDialog() {
         NiceDialogImpl(this).show()
+    }
+
+    fun niceDialogFragmentClick(view: View) {
+        val dialogFragment = NiceDialogFragmentImpl()
+        dialogFragment.show(supportFragmentManager)
     }
 }
