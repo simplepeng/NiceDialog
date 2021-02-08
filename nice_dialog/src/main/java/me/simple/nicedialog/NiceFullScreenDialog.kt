@@ -9,13 +9,9 @@ import android.view.WindowManager
 
 abstract class NiceFullScreenDialog(context: Context) : NiceDialog(context) {
 
-    override fun setWidth(): Int {
-        return WindowManager.LayoutParams.MATCH_PARENT
-    }
+    override fun setWidth() =  WindowManager.LayoutParams.MATCH_PARENT
 
-    override fun setHeight(): Int {
-        return WindowManager.LayoutParams.MATCH_PARENT
-    }
+    override fun setHeight() =  WindowManager.LayoutParams.MATCH_PARENT
 
     override fun show() {
         hideBar()

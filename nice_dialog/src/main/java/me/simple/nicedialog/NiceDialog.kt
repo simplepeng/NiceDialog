@@ -14,17 +14,10 @@ abstract class NiceDialog : Dialog {
     constructor(context: Context) : super(context, R.style.NiceDialog)
     constructor(context: Context, themeResId: Int) : super(context, themeResId)
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        onCreateBefore(savedInstanceState)
-        setContentView(setLayoutRes())
-
-        onCreateAfter(savedInstanceState)
-    }
-
     override fun onStart() {
         super.onStart()
         val w = window ?: return
+
         w.setWindowAnimations(setAnimRes())
         if (autoShowSoftInput()) {
             w.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_VISIBLE)
@@ -40,8 +33,6 @@ abstract class NiceDialog : Dialog {
         w.attributes = params
     }
 
-    abstract fun setLayoutRes(): Int
-
     protected open fun setWidth() = WindowManager.LayoutParams.WRAP_CONTENT
 
     protected open fun setHeight() = WindowManager.LayoutParams.WRAP_CONTENT
@@ -51,12 +42,6 @@ abstract class NiceDialog : Dialog {
     protected open fun setGravity() = Gravity.CENTER
 
     protected open fun setAnimRes(): Int = 0
-
-    protected open fun onCreateBefore(savedInstanceState: Bundle?) {
-
-    }
-
-    abstract fun onCreateAfter(savedInstanceState: Bundle?)
 
     protected open fun autoShowSoftInput() = false
 }
