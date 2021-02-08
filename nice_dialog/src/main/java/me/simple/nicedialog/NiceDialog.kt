@@ -15,10 +15,8 @@ abstract class NiceDialog : Dialog {
     constructor(context: Context, themeResId: Int) : super(context, themeResId)
 
     override fun onStart() {
-        super.onStart()
         val w = window ?: return
 
-        w.setWindowAnimations(setAnimRes())
         if (autoShowSoftInput()) {
             w.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_VISIBLE)
         }
@@ -30,7 +28,11 @@ abstract class NiceDialog : Dialog {
         params.dimAmount = setDimAmount()
         params.gravity = setGravity()
 
+        w.setWindowAnimations(setAnimRes())
+
         w.attributes = params
+
+        super.onStart()
     }
 
     protected open fun setWidth() = WindowManager.LayoutParams.WRAP_CONTENT

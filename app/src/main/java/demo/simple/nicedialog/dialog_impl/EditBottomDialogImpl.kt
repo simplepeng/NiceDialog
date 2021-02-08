@@ -7,12 +7,9 @@ import me.simple.nicedialog.NiceBottomDialog
 
 class EditBottomDialogImpl(context: Context) : NiceBottomDialog(context) {
 
-    override fun setLayoutRes(): Int {
-        return R.layout.dialog_edit
-    }
-
-
-    override fun onCreateAfter(savedInstanceState: Bundle?) {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.dialog_edit)
     }
 
     override fun autoShowSoftInput(): Boolean {

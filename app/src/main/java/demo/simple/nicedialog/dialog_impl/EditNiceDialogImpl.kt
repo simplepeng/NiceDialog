@@ -8,15 +8,9 @@ import me.simple.nicedialog.NiceDialog
 
 class EditNiceDialogImpl(context: Context) : NiceDialog(context) {
 
-    override fun setLayoutRes(): Int {
-        return R.layout.dialog_edit
-    }
-
-    override fun onCreateAfter(savedInstanceState: Bundle?) {
-    }
-
-    override fun setWidth(): Int {
-        return WindowManager.LayoutParams.MATCH_PARENT
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.dialog_edit)
     }
 
     override fun autoShowSoftInput(): Boolean {

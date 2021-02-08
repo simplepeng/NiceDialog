@@ -7,10 +7,8 @@ import me.simple.nicedialog.NiceDialog
 
 class NiceDialogImpl(context: Context) : NiceDialog(context) {
 
-    override fun setLayoutRes(): Int {
-        return R.layout.dialog_nice_impl
-    }
-
-    override fun onCreateAfter(savedInstanceState: Bundle?) {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.dialog_nice_impl)
     }
 }
