@@ -12,36 +12,29 @@ open class NiceDialogFragment : DialogFragment(), INiceDialog {
         setStyle(STYLE_NORMAL, R.style.NiceDialog)
     }
 
-//    override fun onStart() {
-//        super.onStart()
-//
-//        val params = dialog?.window?.attributes?.apply {
-//            this.gravity = setGravity()
-//            this.width = setWidth()
-//            this.height = setHeight()
-//            this.windowAnimations = setAnimRes()
-//        }
-//        dialog?.window?.attributes = params
-//    }
+    override fun onStart() {
+        initWindowSetting(dialog?.window)
+        super.onStart()
+    }
 
     /**
      *
      */
-    fun show(manager: FragmentManager) {
+    open fun show(manager: FragmentManager) {
         super.show(manager, null)
     }
 
     /**
      *
      */
-    fun show(transaction: FragmentTransaction) {
+    open fun show(transaction: FragmentTransaction) {
         super.show(transaction, null)
     }
 
     /**
      *
      */
-    fun showNow(manager: FragmentManager) {
+    open fun showNow(manager: FragmentManager) {
         super.showNow(manager, null)
     }
 }
