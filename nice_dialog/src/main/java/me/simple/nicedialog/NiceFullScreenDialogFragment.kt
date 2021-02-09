@@ -15,19 +15,9 @@ abstract class NiceFullScreenDialogFragment : NiceDialogFragment() {
 
     protected open fun isHideBar(): Boolean = true
 
-    override fun show(manager: FragmentManager) {
+    override fun onStart() {
         hideBar()
-        super.show(manager)
-    }
-
-    override fun show(transaction: FragmentTransaction) {
-        hideBar()
-        super.show(transaction)
-    }
-
-    override fun showNow(manager: FragmentManager) {
-        hideBar()
-        super.showNow(manager)
+        super.onStart()
     }
 
     private fun hideBar() {

@@ -15,9 +15,9 @@ abstract class NiceFullScreenDialog(context: Context) : NiceDialog(context) {
 
     protected open fun isHideBar(): Boolean = true
 
-    override fun show() {
+    override fun onStart() {
         hideBar()
-        super.show()
+        super.onStart()
     }
 
     private fun hideBar() {
