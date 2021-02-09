@@ -12,17 +12,17 @@ open class NiceDialogFragment : DialogFragment(), INiceDialog {
         setStyle(STYLE_NORMAL, R.style.NiceDialog)
     }
 
-    override fun onStart() {
-        super.onStart()
-
-        val params = dialog?.window?.attributes?.apply {
-            this.gravity = setGravity()
-            this.width = setWidth()
-            this.height = setHeight()
-            this.windowAnimations = setAnimRes()
-        }
-        dialog?.window?.attributes = params
-    }
+//    override fun onStart() {
+//        super.onStart()
+//
+//        val params = dialog?.window?.attributes?.apply {
+//            this.gravity = setGravity()
+//            this.width = setWidth()
+//            this.height = setHeight()
+//            this.windowAnimations = setAnimRes()
+//        }
+//        dialog?.window?.attributes = params
+//    }
 
     /**
      *
