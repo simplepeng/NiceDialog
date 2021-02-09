@@ -17,5 +17,4 @@ class NiceDialogFragmentImpl : NiceDialogFragment() {
         return inflater.inflate(R.layout.dialog_nice_impl, container, false)
     }
 
-
 }

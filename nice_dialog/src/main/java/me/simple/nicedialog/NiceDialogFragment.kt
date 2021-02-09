@@ -4,7 +4,12 @@ import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
 
-abstract class NiceDialogFragment : DialogFragment() {
+open class NiceDialogFragment : DialogFragment(), INiceDialog {
+
+    override fun onStart() {
+        initWindowSetting(dialog?.window)
+        super.onStart()
+    }
 
     /**
      *
