@@ -1,9 +1,20 @@
 # NiceDialog
 
+[![](https://jitpack.io/v/simplepeng/NiceDialog.svg)](https://jitpack.io/#simplepeng/NiceDialog)
+
 ## 依赖
 
 ```groovy
-implementation "me.simple:nice-dialog:1.0.0"
+	allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
+```
+
+```groovy
+implementation 'com.github.simplepeng:NiceDialog:v1.0.1'
 ```
 
 ## NiceDialog
