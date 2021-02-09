@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.view.Window
+import demo.simple.nicedialog.dialog_fragment_impl.BottomDialogFragmentImpl
 import demo.simple.nicedialog.dialog_fragment_impl.NiceDialogFragmentImpl
 import demo.simple.nicedialog.dialog_impl.*
 import kotlinx.android.synthetic.main.activity_main.*
@@ -16,7 +17,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         btn_niceDialog.setOnClickListener {
-            showNiceDialog()
+            NiceDialogImpl(this).show()
         }
 
         btn_bottomDialog.setOnClickListener {
@@ -25,9 +26,6 @@ class MainActivity : AppCompatActivity() {
 
         btn_editDialog.setOnClickListener {
             val dialogImpl = EditNiceDialogImpl(this)
-//            dialogImpl.setOnShowListener{
-//
-//            }
             dialogImpl.show()
         }
 
@@ -38,14 +36,14 @@ class MainActivity : AppCompatActivity() {
         btn_fullDialog.setOnClickListener {
             FullDialogImpl(this).show()
         }
+
+        //
+        btnNiceDialogFragment.setOnClickListener {
+            NiceDialogFragmentImpl().show(supportFragmentManager)
+        }
+        btnNiceBottomDialogFragment.setOnClickListener {
+            BottomDialogFragmentImpl().show(supportFragmentManager)
+        }
     }
 
-    private fun showNiceDialog() {
-        NiceDialogImpl(this).show()
-    }
-
-    fun niceDialogFragmentClick(view: View) {
-        val dialogFragment = NiceDialogFragmentImpl()
-        dialogFragment.show(supportFragmentManager)
-    }
 }

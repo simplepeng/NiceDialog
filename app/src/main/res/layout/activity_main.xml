@@ -47,11 +47,19 @@
         app:layout_constraintTop_toBottomOf="@+id/btn_bottomEditDialog" />
 
     <Button
+        android:id="@+id/btnNiceDialogFragment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:text="NiceDialogFragment"
-        android:onClick="niceDialogFragmentClick"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_fullDialog" />
+
+    <Button
+        android:id="@+id/btnNiceBottomDialogFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NiceBottomDialogFragment"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnNiceDialogFragment" />
 </androidx.constraintlayout.widget.ConstraintLayout>
