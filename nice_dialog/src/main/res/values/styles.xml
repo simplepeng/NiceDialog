@@ -12,4 +12,5 @@
         <item name="android:windowEnterAnimation">@anim/nice_bottom_in</item>
         <item name="android:windowExitAnimation">@anim/nice_bottom_out</item>
     </style>
+
 </resources>
