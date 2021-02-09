@@ -3,6 +3,7 @@ package me.simple.nicedialog
 import android.app.Dialog
 import android.content.Context
 import android.util.Log
+import android.view.Window
 import android.view.WindowManager
 
 abstract class NiceDialog : Dialog, INiceDialog {
@@ -16,4 +17,22 @@ abstract class NiceDialog : Dialog, INiceDialog {
         super.onStart()
     }
 
+    private fun initWindowSetting(window: Window?) {
+        if (window == null) return
+
+        if (autoShowSoftInput()) {
+            window.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_VISIBLE)
+        }
+
+        val params = window.attributes
+
+        params.width = setWidth()
+        params.height = setHeight()
+        params.dimAmount = setDimAmount()
+        params.gravity = setGravity()
+
+        window.setWindowAnimations(setAnimRes())
+
+        window.attributes = params
+    }
 }

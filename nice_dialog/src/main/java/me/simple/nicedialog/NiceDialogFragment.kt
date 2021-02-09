@@ -1,18 +1,27 @@
 package me.simple.nicedialog
 
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
 
 open class NiceDialogFragment : DialogFragment(), INiceDialog {
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setStyle(STYLE_NORMAL, R.style.NiceDialog)
+    }
+
     override fun onStart() {
-        initWindowSetting(dialog?.window)
         super.onStart()
+
+        val params = dialog?.window?.attributes?.apply {
+            this.gravity = setGravity()
+            this.width = setWidth()
+            this.height = setHeight()
+            this.windowAnimations = setAnimRes()
+        }
+        dialog?.window?.attributes = params
     }
 
     /**

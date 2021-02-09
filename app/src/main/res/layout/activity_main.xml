@@ -42,7 +42,7 @@
         android:id="@+id/btn_fullDialog"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="FullDialog"
+        android:text="FullScreenDialog"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_bottomEditDialog" />
 
@@ -62,4 +62,12 @@
         android:text="NiceBottomDialogFragment"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnNiceDialogFragment" />
+
+    <Button
+        android:id="@+id/btnNiceFullScreenDialogFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NiceFullScreenDialogFragment"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnNiceBottomDialogFragment" />
 </androidx.constraintlayout.widget.ConstraintLayout>

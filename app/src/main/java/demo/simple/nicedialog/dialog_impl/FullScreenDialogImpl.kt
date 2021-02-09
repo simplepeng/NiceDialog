@@ -5,7 +5,7 @@ import android.os.Bundle
 import demo.simple.nicedialog.R
 import me.simple.nicedialog.NiceFullScreenDialog
 
-class FullDialogImpl(context: Context) : NiceFullScreenDialog(context) {
+class FullScreenDialogImpl(context: Context) : NiceFullScreenDialog(context) {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

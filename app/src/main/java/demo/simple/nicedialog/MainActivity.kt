@@ -2,9 +2,9 @@ package demo.simple.nicedialog
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import android.view.Window
 import demo.simple.nicedialog.dialog_fragment_impl.BottomDialogFragmentImpl
+import demo.simple.nicedialog.dialog_fragment_impl.FullScreenDialogFragmentImpl
 import demo.simple.nicedialog.dialog_fragment_impl.NiceDialogFragmentImpl
 import demo.simple.nicedialog.dialog_impl.*
 import kotlinx.android.synthetic.main.activity_main.*
@@ -34,7 +34,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         btn_fullDialog.setOnClickListener {
-            FullDialogImpl(this).show()
+            FullScreenDialogImpl(this).show()
         }
 
         //
@@ -43,6 +43,9 @@ class MainActivity : AppCompatActivity() {
         }
         btnNiceBottomDialogFragment.setOnClickListener {
             BottomDialogFragmentImpl().show(supportFragmentManager)
+        }
+        btnNiceFullScreenDialogFragment.setOnClickListener {
+            FullScreenDialogFragmentImpl().show(supportFragmentManager)
         }
     }
 

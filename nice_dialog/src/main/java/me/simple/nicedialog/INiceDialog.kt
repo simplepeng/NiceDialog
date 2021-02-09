@@ -18,22 +18,4 @@ interface INiceDialog {
 
     fun autoShowSoftInput() = false
 
-    fun initWindowSetting(window: Window?) {
-        if (window == null) return
-
-        if (autoShowSoftInput()) {
-            window.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_VISIBLE)
-        }
-
-        val params = window.attributes
-
-        params.width = setWidth()
-        params.height = setHeight()
-        params.dimAmount = setDimAmount()
-        params.gravity = setGravity()
-
-        window.setWindowAnimations(setAnimRes())
-
-        window.attributes = params
-    }
 }
